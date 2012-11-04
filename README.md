@@ -23,3 +23,9 @@ To update the code on heroku:
     - login to heroku: `heroku login`
     - this will ask you to select a ssh key if you don't have on in your account
 - push the code to heroku `git push heroku master`
+
+How the script is run
+
+- the script is run using the scheduler:standard
+- you can open the web configuration from the commandline with:
+  `heroku addons:open scheduler:standard`
