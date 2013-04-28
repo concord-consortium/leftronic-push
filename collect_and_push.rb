@@ -5,9 +5,10 @@ require 'open-uri'
 
 # pull data from portals
 portals = [
-  "rites-investigations.concord.org",
+  "investigate.ritesproject.net",
   "has.portal.concord.org",
-  "itsisu.portal.concord.org"
+  "itsisu.portal.concord.org",
+  "interactions.portal.concord.org"
 ]
 stats = portals.map{|portal|
   puts "Getting stats from: #{portal}"
