@@ -21,6 +21,8 @@ portals = [
   "has.portal.concord.org/misc/stats.json",
   "itsisu.portal.concord.org/misc/stats.json",
   "interactions.portal.concord.org/misc/stats.json",
+  "geniverse.concord.org/portal/misc/stats.json",
+  "genigames.concord.org/portal/misc/stats.json",
   "admin.concord.org/portalstats/"
 ]
 portal_stats = portals.map{|portal|
