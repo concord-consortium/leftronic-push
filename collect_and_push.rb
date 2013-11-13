@@ -17,14 +17,15 @@ metrics = {
 # pull data from portals
 ###
 portals = [
-  "investigate.ritesproject.net",
-  "has.portal.concord.org",
-  "itsisu.portal.concord.org",
-  "interactions.portal.concord.org"
+  "investigate.ritesproject.net/misc/stats.json",
+  "has.portal.concord.org/misc/stats.json",
+  "itsisu.portal.concord.org/misc/stats.json",
+  "interactions.portal.concord.org/misc/stats.json",
+  "admin.concord.org/portalstats/"
 ]
 portal_stats = portals.map{|portal|
   puts "Getting stats from: #{portal}"
-  JSON.parse(open("http://#{portal}/misc/stats.json").read)
+  JSON.parse(open("http://#{portal}").read)
 }
 
 portal_stats.each{|stat|
@@ -37,41 +38,8 @@ portal_stats.each{|stat|
   metrics[:total_classes] += stat["classes"].to_i if stat["classes"]
 }
 
-### 
-# add in static stats from php portal:
-###
 
-# select count(distinct portal_class_students.class_student_id) as active_students, 
-# count(distinct portal_classes.class_id) as active_classes, 
-# count(distinct portal_classes.class_teacher) as active_teachers from portal_classes 
-# inner join portal_class_activities on portal_classes.class_id = portal_class_activities.class_id 
-# inner join portal_class_students on portal_class_students.class_id = portal_classes.class_id 
-# inner join portal_members on portal_members.member_id = portal_classes.class_teacher;
-# +-----------------+----------------+-----------------+
-# | active_students | active_classes | active_teachers |
-# +-----------------+----------------+-----------------+
-# |           44314 |           2290 |             819 |
-# +-----------------+----------------+-----------------+
-metrics[:classes] += 2290
-metrics[:teachers] += 819
-metrics[:students] += 44314
-
-# select member_type, count(*) from portal_members group by member_type;
-# +-------------+----------+
-# | member_type | count(*) |
-# +-------------+----------+
-# | admin       |     2604 | 
-# | student     |    53523 | 
-# | superuser   |       19 | 
-# | teacher     |     1293 | 
-# +-------------+----------+
-metrics[:total_teachers] += 1293
-metrics[:total_students] += 53523
-
-# select count(*) from portal_classes;
-metrics[:total_classes] += 4125
-
-# from activity finder
+# Adding static stats from activity finder:
 metrics[:runnables] += 87
 # from php portal
 # ???
