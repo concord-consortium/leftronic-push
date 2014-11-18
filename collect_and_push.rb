@@ -17,13 +17,16 @@ metrics = {
 # pull data from portals
 ###
 portals = [
-  "investigate.ritesproject.net/misc/stats.json",
-  "has.portal.concord.org/misc/stats.json",
-  "itsisu.portal.concord.org/misc/stats.json",
-  "interactions.portal.concord.org/misc/stats.json",
+  "admin.concord.org/portalstats/",
+  "codap.portal.concord.org/misc/stats.json",
   "geniverse.concord.org/portal/misc/stats.json",
-  "genigames.concord.org/portal/misc/stats.json",
-  "admin.concord.org/portalstats/"
+  "has.portal.concord.org/misc/stats.json",
+  "inquiryspace.portal.concord.org/misc/stats.json",
+  "interactions.portal.concord.org/misc/stats.json",
+  "investigate.ritesproject.net/misc/stats.json",
+  "itsi.portal.concord.org/misc/stats.json",
+  "learn.concord.org/misc/stats.json",
+  "ngss-assessment.portal.concord.org/misc/stats.json"
 ]
 portal_stats = portals.map{|portal|
   puts "Getting stats from: #{portal}"
