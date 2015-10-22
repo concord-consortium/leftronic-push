@@ -30,7 +30,12 @@ portals = [
 ]
 portal_stats = portals.map{|portal|
   puts "Getting stats from: #{portal}"
-  JSON.parse(open("http://#{portal}").read)
+  begin
+    JSON.parse(open("http://#{portal}").read)
+  rescue
+    puts "FAILED!"
+    {}
+  end
 }
 
 portal_stats.each{|stat|
