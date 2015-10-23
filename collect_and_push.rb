@@ -100,7 +100,7 @@ portal_stats = portals.map{|portal, config|
     begin
       data = JSON.parse(open(config[:url]).read)
     rescue => e
-      puts "FAILED!\n#{e}"
+      puts "FAILED!\n"
     end
   end
   data
