@@ -24,15 +24,15 @@ portals = {
     url: "http://codap.portal.concord.org/misc/stats.json"
   },
   Genigames: {
-    # FIXME Need to find numbers...
+    # Official project teachers/students only here. Classes are an estimate. Doesn't include random other users.
     data: {
-      active_classes: 0,
-      active_teachers: 0,
-      active_students: 0,
-      active_runnables: 0,
-      teachers: 0,
-      students: 0,
-      classes: 0
+      active_classes: 54,
+      active_teachers: 18,
+      active_students: 812,
+      active_runnables: 54,
+      teachers: 18,
+      students: 812,
+      classes: 54
     }
   },
   Geniverse: {
