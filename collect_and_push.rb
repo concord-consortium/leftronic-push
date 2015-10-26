@@ -70,16 +70,16 @@ portals = {
     url: "http://investigate.ritesproject.net/misc/stats.json"
   },
   ITSI: {
-    # This is data from before ITSI was merged into the Learn portal. Teacher accounts were migrated, though,
-    # so we're leaving 'teachers' at 0 so we don't double-count. Classes and students weren't migrated, so
-    # we're still counting 'active_teachers'
+    # This is data from before ITSI was merged into the Learn portal. Active teacher accounts were migrated, though,
+    # so we're leaving 'teachers' at 3404 so we don't double-count the active ones. Classes and students weren't migrated, so
+    # we're still including 'active_teachers'.
     url: "http://itsi-portal-2009.concord.org/misc/stats.json",
     data: {
       active_classes: 1129,
       active_teachers: 407,
       active_students: 18440,
       active_runnables: 647,
-      teachers: 0,
+      teachers: 3404,  # 3811 - 407
       students: 34898,
       classes: 3910
     }
