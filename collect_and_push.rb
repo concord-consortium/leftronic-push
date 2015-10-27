@@ -19,10 +19,6 @@ metrics = {
 # pull data from portals
 ###
 portals = {
-  PHPPortal: {
-    # This counts all of the old PHP Portal users
-    url: "http://admin.concord.org/portalstats/"
-  },
   CODAP: {
     url: "http://codap.portal.concord.org/misc/stats.json"
   },
@@ -69,9 +65,6 @@ portals = {
   Interactions: {
     url: "http://interactions.portal.concord.org/misc/stats.json"
   },
-  RITES: {
-    url: "http://investigate.ritesproject.net/misc/stats.json"
-  },
   ITSI: {
     # This is the new ITSI portal
     url: "http://itsi-portal-2009.concord.org/misc/stats.json"
@@ -96,6 +89,13 @@ portals = {
   },
   NGSS: {
     url: "http://ngss-assessment.portal.concord.org/misc/stats.json"
+  },
+  PHPPortal: {
+    # This counts all of the old PHP Portal users
+    url: "http://admin.concord.org/portalstats/"
+  },
+  RITES: {
+    url: "http://investigate.ritesproject.net/misc/stats.json"
   }
 }
 portal_stats = portals.map{|portal, config|
