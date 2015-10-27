@@ -19,7 +19,8 @@ metrics = {
 # pull data from portals
 ###
 portals = {
-  General: {
+  PHPPortal: {
+    # This counts all of the old PHP Portal users
     url: "http://admin.concord.org/portalstats/"
   },
   CODAP: {
