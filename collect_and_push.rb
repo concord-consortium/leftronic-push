@@ -26,25 +26,25 @@ portals = {
   Genigames: {
     # Official project teachers/students only here. Classes are an estimate. Doesn't include random other users.
     data: {
-      active_classes: 54,
-      active_teachers: 18,
-      active_students: 812,
-      active_runnables: 54,
-      teachers: 18,
-      students: 812,
-      classes: 54
+      "active_classes" => 54,
+      "active_teachers" => 18,
+      "active_students" => 812,
+      "active_runnables" => 54,
+      "teachers" => 18,
+      "students" => 812,
+      "classes" => 54
     }
   },
   Geniverse: {
     url: "http://geniverse.concord.org/portal/misc/stats.json",
     data: {
-      active_classes: 1396,
-      active_teachers: 1101,
-      active_students: 20800,
-      active_runnables: 1396,
-      teachers: 1101,
-      students: 20800,
-      classes: 1396
+      "active_classes" => 1396,
+      "active_teachers" => 1101,
+      "active_students" => 20800,
+      "active_runnables" => 1396,
+      "teachers" => 1101,
+      "students" => 20800,
+      "classes" => 1396
     }
   },
   HAS: {
@@ -54,13 +54,13 @@ portals = {
     # AU 2015-10-23: Dan wasn't sure on numbers, but didn't think there were a significant amount... Trudi supplied a gut-level estimate.
     url: "http://inquiryspace.portal.concord.org/misc/stats.json",
     data: {
-      active_classes: 25,
-      active_teachers: 10,
-      active_students: 500,
-      active_runnables: 100,
-      teachers: 10,
-      students: 500,
-      classes: 25
+      "active_classes" => 25,
+      "active_teachers" => 10,
+      "active_students" => 500,
+      "active_runnables" => 100,
+      "teachers" => 10,
+      "students" => 500,
+      "classes" => 25
     }
   },
   Interactions: {
@@ -75,13 +75,13 @@ portals = {
     # we're still including 'active_teachers'.
     url: "http://itsi-portal-2009.concord.org/misc/stats.json",
     data: {
-      active_classes: 1129,
-      active_teachers: 407,
-      active_students: 18440,
-      active_runnables: 647,
-      teachers: 3404,  # 3811 - 407
-      students: 34898,
-      classes: 3910
+      "active_classes" => 1129,
+      "active_teachers" => 407,
+      "active_students" => 18440,
+      "active_runnables" => 647,
+      "teachers" => 3404,  # 3811 - 407
+      "students" => 34898,
+      "classes" => 3910
     }
   },
   Learn: {
