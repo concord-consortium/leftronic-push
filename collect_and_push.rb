@@ -67,7 +67,7 @@ portals = {
   },
   ITSI: {
     # This is the new ITSI portal
-    url: "http://itsi-portal-2009.concord.org/misc/stats.json"
+    url: "https://itsi.portal.concord.org/misc/stats.json"
   },
   ITSIold: {
     # This is data from before ITSI was merged into the Learn portal. Active teacher accounts were migrated to ITSI-new, though,
