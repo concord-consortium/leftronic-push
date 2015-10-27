@@ -3,6 +3,8 @@ require 'leftronic'
 require 'json'
 require 'open-uri'
 
+update = ENV['LEFTRONIC_KEY'] ? Leftronic.new(ENV['LEFTRONIC_KEY']) : nil
+
 metrics = {
   classes: 0,
   teachers: 0,
@@ -94,17 +96,24 @@ portals = {
 portal_stats = portals.map{|portal, config|
   data = {}
   if config[:data]
+    puts "Getting static stats from: #{portal}"
     data = config[:data]
   elsif config[:url]
     puts "Getting stats from: #{portal} (#{config[:url]})"
     begin
       data = JSON.parse(open(config[:url]).read)
-    rescue => e
-      puts "FAILED!\n"
+    rescue
+      puts "FAILED!"
     end
   end
+  if !update
+    deb = [data["active_students"], data["active_classes"], data["active_teachers"], data["teachers"], data["students"], data["classes"]]
+    puts deb.map{|d| '%7s' % d.to_s}.join(", ")
+  end
+  puts
   data
 }
+
 
 portal_stats.each{|stat|
   metrics[:classes] += stat["active_classes"].to_i if stat["active_classes"]
@@ -123,8 +132,6 @@ metrics[:runnables] += 87
 # ???
 
 puts metrics.inspect
-
-update = ENV['LEFTRONIC_KEY'] ? Leftronic.new(ENV['LEFTRONIC_KEY']) : nil
 
 metrics.each{|key, value|
   if update
